@@ -1,11 +1,19 @@
 body {
     margin: 0;
     min-height: 100vh;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: url('images/background.jpg') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
     color: #fff;
     font-family: 'Arial', sans-serif;
     position: relative;
     overflow: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 .container {
@@ -13,9 +21,11 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    min-height: 100vh;
     padding: 20px;
     position: relative;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .container::before {
@@ -46,7 +56,7 @@ h1 {
 }
 
 .countdown-container {
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(0, 0, 0, 0.7);
     padding: 30px;
     text-align: center;
     display: flex;
@@ -54,7 +64,7 @@ h1 {
     align-items: center;
     gap: 25px;
     border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     width: 90%;
     max-width: 600px;
     position: relative;
@@ -168,10 +178,42 @@ h1 {
 
 @media (max-width: 600px) {
     h1 {
-        font-size: 2em;
+        font-size: 1.8em;
+        margin-bottom: 15px;
     }
     
     .countdown-text {
-        font-size: 1.5em;
+        font-size: 1.4em;
+        margin-bottom: 15px;
+    }
+
+    .countdown-container {
+        padding: 20px;
+        width: 95%;
+        margin: 10px auto;
+    }
+
+    .time-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .time-item {
+        padding: 12px 20px;
+        font-size: 1.1em;
+        min-width: 100%;
+        margin: 5px 0;
+    }
+
+    .time-label {
+        font-size: 0.8em;
+    }
+
+    .reload-btn {
+        padding: 10px 20px;
+        font-size: 1em;
+        margin-top: 15px;
+        width: 100%;
+        max-width: 300px;
     }
 }
