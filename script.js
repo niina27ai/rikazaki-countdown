@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
     title.textContent = '里崎ライブ2025カウントダウン';
     
     // カウントダウンテキストのスタイルを設定
-    countdownText.style.color = '#fff';
+    countdownText.style.color = '#ff3333';
     countdownText.style.fontWeight = 'bold';
     countdownText.style.textShadow = '2px 2px 4px rgba(0,0,0,0.3)';
 
